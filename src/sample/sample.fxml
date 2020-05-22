@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="20" vgap="20" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="395.0" prefWidth="344.0">
+         <children>
+            <Canvas fx:id="canvas" height="276.0" layoutX="15.0" layoutY="18.0" width="327.0" />
+            <Button fx:id="button_1" layoutX="164.0" layoutY="348.0" mnemonicParsing="false" onAction="#addPicker" text="ЖМЯК" />
+            <TextField fx:id="tx_f" layoutX="100.0" layoutY="323.0" prefHeight="25.0" prefWidth="180.0" />
+            <Label layoutX="100.0" layoutY="306.0" text="Введи от 0 до 4 и получи фигуру" />
+            <Label layoutX="23.0" layoutY="375.0" text="0-круг, 1 - линия, 2 - угол, 3- треугольник, 4- прямоугольник" />
+         </children>
+      </AnchorPane>
+   </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
