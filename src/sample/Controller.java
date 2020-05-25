@@ -7,9 +7,11 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.InputMethodTextRun;
 
+import java.util.Objects;
 
 
 public class Controller {
@@ -18,27 +20,34 @@ public class Controller {
     public TextField tx_f;
 
 
+
     public void addPicker(ActionEvent actionEvent) {
         GraphicsContext gr = canvas.getGraphicsContext2D();
 
-        if(  tx_f.getText().equals(""))
+
+         if(Objects.equals(tx_f.getText(), "A")
+                 ||Objects.equals(tx_f.getText(), "E")
+                 ||Objects.equals(tx_f.getText(), "G")
+                 ||Objects.equals(tx_f.getText(), "M")
+                 ||Objects.equals(tx_f.getText(), "S")){
+
+             String stringOfSides = tx_f.getText();
+             Shape_Factory shapeFactory = new Shape_Factory();
+             Shape shape1 = shapeFactory.createShape(stringOfSides);
+             gr.clearRect(0, 0, 250, 485);
+             shape1.draw(gr);
+         }
+
+        else
         {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-
             alert.setTitle("Предупреждение: ");
             alert.setHeaderText(null);
-            alert.setContentText("Введено нечисло или число не из диапазона от 0 до 4!");
+            alert.setContentText("Проверьте правильность введённой буквы и её регистр!");
             alert.showAndWait();
             return;
-        }else {
-            int numberOfSides = Integer.parseInt(tx_f.getText());
-            Shape_Factory shapeFactory = new Shape_Factory();
-            Shape shape1 = shapeFactory.createShape(numberOfSides);
-            gr.clearRect(0, 0, 250, 485);
-            shape1.draw(gr);
-    }
+        }
+
 }
-
-
 
 }

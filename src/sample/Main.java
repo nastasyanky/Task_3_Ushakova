@@ -11,8 +11,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Считаем прямые");
-        primaryStage.setScene(new Scene(root, 400, 400));
+        primaryStage.setTitle("Изучаем элементы BPMN");
+        primaryStage.setScene(new Scene(root, 400, 410));
         primaryStage.show();
     }
 

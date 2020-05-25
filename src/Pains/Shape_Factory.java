@@ -1,24 +1,31 @@
 package Pains;
 
-public class Shape_Factory {
-    public Shape createShape(int numberOfSides){
+import java.util.Objects;
 
-        if(numberOfSides==4){
-            return new Rectangle_R();
+public class Shape_Factory {
+
+
+    public Shape createShape(String stringOfSides){
+
+
+        if(Objects.equals(stringOfSides, "M")){
+            return new Message_Flow_R();
         }
-        else if(numberOfSides==3){
-            return new Triangle_R();
+        else if(Objects.equals(stringOfSides, "A")){
+            return new Activities_R();
         }
-        else if(numberOfSides==2){
-            return new Angle_R();
+        else if(Objects.equals(stringOfSides, "G")){
+            return new Gateways_R();
         }
-        else if (numberOfSides==1){
-            return new Straight_R();
+        else if (Objects.equals(stringOfSides, "E")){
+            return new Event_R();
         }
-        else if(numberOfSides==0){
-            return new Circle_R();
+        else if(Objects.equals(stringOfSides, "S")){
+            return new Sequence_Flow_R();
         }else{
             return null;
         }
+
+
     }
 }
