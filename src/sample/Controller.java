@@ -34,14 +34,14 @@ public class Controller {
              String stringOfSides = tx_f.getText();
              Shape_Factory shapeFactory = new Shape_Factory();
              Shape shape1 = shapeFactory.createShape(stringOfSides);
-             gr.clearRect(0, 0, 250, 485);
+             gr.clearRect(0, 0, 250, 495);
              shape1.draw(gr);
          }
 
         else
         {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Предупреждение: ");
+            alert.setTitle("Предупреждение:: ");
             alert.setHeaderText(null);
             alert.setContentText("Проверьте правильность введённой буквы и её регистр!");
             alert.showAndWait();

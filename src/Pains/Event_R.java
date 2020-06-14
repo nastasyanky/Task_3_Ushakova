@@ -9,6 +9,6 @@ public class Event_R implements Shape{
         gr.setFill(Color.WHITE);
         gr.fillRect(10,10,500,500);
         gr.setLineDashes(1);
-        gr.strokeOval(100,100,50,50);
+        gr.strokeOval(100,100,55,55);
     }
 }
